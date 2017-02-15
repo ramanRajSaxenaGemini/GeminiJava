@@ -22,12 +22,16 @@ class JSONQ2{
 			String line;
 
 			
-		
+			while ((line = bufferedReader.readLine()) != null)
+			{
+				content.append(line + "\n");
+			}
+			bufferedReader.close();
    
   
 			//FileReader reader = new FileReader("Q2.json");
 			JSONParser jsonParser = new JSONParser();
-	    	jsonArray = (JSONArray) jsonParser.parse(bufferedReader);
+	    	jsonArray = (JSONArray) jsonParser.parse(content);
 			
 			printCountryDetails("India");
 			printProperty("Australia","timezones");
