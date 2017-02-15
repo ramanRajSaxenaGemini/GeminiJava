@@ -11,7 +11,7 @@ class JSONQ2{
 		try{
 			StringBuilder content = new StringBuilder();
 
-			URL url = new URL("https://restcountries.eu/rest/v1/all");
+			URL url = new URL("http://restcountries.eu/rest/v1/all");
 
 			
 			URLConnection urlConnection = url.openConnection();
