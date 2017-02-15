@@ -11,7 +11,7 @@ class JSONQ2{
 		try{
 			StringBuilder content = new StringBuilder();
 
-			URL url = new URL("https://restcountries.eu/rest/v1/all");
+			URL url = new URL("http://restcountries.eu/rest/v1/all");
 
 			
 			URLConnection urlConnection = url.openConnection();
@@ -22,16 +22,12 @@ class JSONQ2{
 			String line;
 
 			
-			while ((line = bufferedReader.readLine()) != null)
-			{
-				content.append(line + "\n");
-			}
-			bufferedReader.close();
+		
    
   
 			//FileReader reader = new FileReader("Q2.json");
 			JSONParser jsonParser = new JSONParser();
-	    	jsonArray = (JSONArray) jsonParser.parse(content);
+	    	jsonArray = (JSONArray) jsonParser.parse(bufferedReader);
 			
 			printCountryDetails("India");
 			printProperty("Australia","timezones");
