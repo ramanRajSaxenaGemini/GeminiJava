@@ -1,0 +1,34 @@
+class StringPartitioning{
+	
+	static int[][] cuts;
+	public static void main(String s[]){
+		String str = new java.util.Scanner(System.in).nextLine();
+		int len = str.length();
+		cuts = new int[len][len];
+		makePartition(str);
+		System.out.println("Minimum number of cuts : "+cuts[0][len-1]);
+	}
+	
+	public static int makePartition(String s){
+		int minCuts = 0;
+		int len = s.length();
+		for(int i=1;i<=len;i++){
+			for(int j=0;j<=len-i;j++){
+				if(isPallindrom(s.substring(j,j+i)))
+					return 0;
+				else {
+					
+									
+				}
+			}
+		}
+		return minCuts;
+	}
+	
+	
+	
+	public static boolean isPallindrom(String s){
+		
+		return s.equals(new StringBuffer(s).reverse().toString());
+	}
+}
