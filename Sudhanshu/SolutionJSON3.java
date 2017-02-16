@@ -18,8 +18,8 @@ public class SolutionJSON3 {
 			URLConnection urlConnection = url.openConnection();
 			urlConnection.connect();
 			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
-            Object obj = parser.parse(bufferedReader);
-            JSONArray objectArray=(JSONArray)obj;
+            		Object obj = parser.parse(bufferedReader);
+            		JSONArray objectArray=(JSONArray)obj;
 			
 			Iterator object = objectArray.iterator();
 			while(object.hasNext()){
