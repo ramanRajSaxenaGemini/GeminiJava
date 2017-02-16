@@ -92,8 +92,8 @@ public class SolutionJSON3 {
 			}//eo while
  
         }//eo try
-		catch (Exception e) {
-            e.printStackTrace();
+	catch (Exception e) {
+        	e.printStackTrace();
         }//eo catch
     }//eo main
 }//eo class
